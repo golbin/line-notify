@@ -29,6 +29,16 @@ notify.send("Sticker test", sticker_id=283, package_id=4)
 notify.send("Image & Sticker test", image_path='./test.jpg', sticker_id=283, package_id=4)
 ```
 
+If you set LineNotify off, then it won't send a message. (Default is `on`)
+
+```python
+notify.off()
+notify.send("It won't be sent.")
+
+notify.on()
+notify.send("It will be sent.")
+```
+
 ## Reference
 
 [LINE Notify API Document](https://notify-bot.line.me/doc)

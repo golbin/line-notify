@@ -15,8 +15,17 @@ class LineNotify:
 
         :param access_token:
         """
+        self.enable = True
         self.accessToken = access_token
         self.headers = {"Authorization": "Bearer " + access_token}
+
+    def on(self):
+        """Enable notify"""
+        self.enable = True
+
+    def off(self):
+        """Disable notify"""
+        self.enable = False
 
     def send(self, message, image_path=None, sticker_id=None, package_id=None):
         """Examples:
@@ -32,6 +41,9 @@ class LineNotify:
         :param package_id: integer
         :return:
         """
+        if not self.enable:
+            return
+
         files = {}
         params = {"message": message}
 
