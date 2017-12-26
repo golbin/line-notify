@@ -39,6 +39,16 @@ notify.on()
 notify.send("It will be sent.")
 ```
 
+Also if you set `ACCESS_TOKEN=None`, it won't send a message.
+
+```python
+ACCESS_TOKEN = None
+
+notify = LineNotify(ACCESS_TOKEN)
+
+notify.send("It won't be sent.")
+```
+
 ## Reference
 
 [LINE Notify API Document](https://notify-bot.line.me/doc)

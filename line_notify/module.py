@@ -15,9 +15,14 @@ class LineNotify:
 
         :param access_token:
         """
-        self.enable = True
-        self.accessToken = access_token
-        self.headers = {"Authorization": "Bearer " + access_token}
+        if access_token:
+            self.enable = True
+            self.accessToken = access_token
+            self.headers = {"Authorization": "Bearer " + access_token}
+        else:
+            self.enable = False
+            self.accessToken = access_token
+            self.headers = {}
 
     def on(self):
         """Enable notify"""
