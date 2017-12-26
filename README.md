@@ -51,4 +51,4 @@ notify.send("It won't be sent.")
 
 ## Reference
 
-[LINE Notify API Document](https://notify-bot.line.me/doc)
+[LINE Notify API Document](https://notify-bot.line.me/doc/)
