@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='line_notify',
-    version='0.1.2',
+    version='0.1.4',
     description='A Simple Wrapper for LINE Messenger Notify',
     license='MIT',
     author='Jin Kim',
