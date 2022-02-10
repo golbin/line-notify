@@ -67,5 +67,5 @@ class LineNotify:
         if sticker_id and package_id:
             params = {**params, "stickerId": sticker_id, "stickerPackageId": package_id}
 
-        requests.post(API_URI, headers=self.headers, params=params, files=files)
+        return requests.post(API_URI, headers=self.headers, params=params, files=files)
 
